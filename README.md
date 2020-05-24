@@ -17,22 +17,3 @@ The block chain based solution to voting is a long discussed solution to the pro
 
 IIIT community is often faced with problems, that require attention of authorities. But for this, a large group should be in agreement. This is hard for it requires a MP, and multiple mails and posts to the student community. Why not make a college petitions page that can be used to make and sign petitions, or to browse the petitions they agree to.
 
-
-## Installation
-
-1. If you intend to contribute to the block chain portion
-
-```bash
-npm install --save crypto-js
-```
-2. If you intend to use react-js
-
-```bash
-sudo apt install nodejs
-npm install create-react-app
-npx create-react-app app
-```
-To start the server : 
-```bash
-npm start
-```
