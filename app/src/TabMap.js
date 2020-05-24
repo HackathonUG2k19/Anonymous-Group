@@ -7,20 +7,17 @@ class Table extends React.Component {
         const calcSize = (num) => {
             return num.getSize();
         }
+        console.log(PetitionList.length)
         return (
             <table>
-                <thead>
-                    <td>Petition Name</td>
-                    <td>Petition Text</td>
-                    <td>Petition Votes</td>
-                </thead>
                 <tbody>
                     {
                         PetitionList.map((numList, i) => (
                             <tr key={i}>
+                                <td>{i}</td>
                                 <td>{numList[0]}</td>
                                 <td>{numList[1]}</td>
-                                <td>{numList[2].getSize() - 1}</td>
+                                <td>{numList[2].countVotesOf(numList[0])}</td>
                             </tr>
                         ))
                     }

@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import { userDone, pswd, userStatus, PetitionList } from './DataSet'
-import { object } from './App'
+import App,{ object } from './App'
 import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink } from 'reactstrap';
 import './App.css';
+
+
+const refresh = () => {
+    window.location.reload(false);
+  };
+
+
 class EssayForm extends React.Component {
     constructor(props) {
         super(props);
@@ -32,14 +39,15 @@ class EssayForm extends React.Component {
                     alert("Wrong Password");
                 }
                 else {
-                    var title = prompt("Please enter your petition title");
+                    var title = prompt("Please enter your petition title").toString();
                     PetitionList.push([title, this.state.value.toString(), object()]);
                     PetitionList[PetitionList.length - 1][2].castVote({ 'elect': title.toString(), 'vote': 1 });
                     console.log("Added petition", title.toString(), this.state.value.toString());
+                    console.log("Petition Size",PetitionList.length)
                 }
             }
         }
-        this.setState({ value: "Paste your petition" })
+        this.setState({ value: "Type your petition" })
         event.preventDefault();
     }
 

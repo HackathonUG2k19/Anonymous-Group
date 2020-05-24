@@ -1,5 +1,6 @@
 import React from 'react';
 import { userDone, pswd, userStatus, PetitionList } from './DataSet'
+import Vote from './vote'
 
 
 class InputForm extends React.Component {
@@ -33,8 +34,11 @@ class InputForm extends React.Component {
                 else {
 
                     for (let x = 0; x < PetitionList.length; x++) {
-                        if (PetitionList[x][0] == this.state.pet) {
-                            PetitionList[x][2].castVote({ 'elect': PetitionList[x][0], 'vote': 1 });
+                        if (PetitionList[x][0] == this.state.value.toString()) {
+                            console.log(PetitionList[x][0])
+                            console.log(this.state.value.toString())
+                            PetitionList[x][2].castVote(new Vote({ 'elect':this.state.value.toString(), 'vote': 1 }));
+                            console.log(PetitionList[x][2].getSize(),"size of list or chain")
                             console.log("Added vote");
                         }
                     }

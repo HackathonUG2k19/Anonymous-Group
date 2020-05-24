@@ -61,6 +61,7 @@ class BlockChain {
         this.pendingVotes.push(vote);
         let block = new Block(vote, Date.now(), this.chain[this.chain.length - 1].hash);
         block.mineBlock(this.difficulty);
+        console.log("casted vote",vote['elect'])
         this.chain.push(block); // add block to the chain
     }
 
