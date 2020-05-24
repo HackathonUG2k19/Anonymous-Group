@@ -45,25 +45,4 @@ Now run the code using
 ```bash
 npm start
 ```
-
-If the code still doesnot run and/or you notice some dependencies unlisted, please raise an issue
-=======
-
-## Installation
-
-1. If you intend to contribute to the block chain portion
-
-```bash
-npm install --save crypto-js
-```
-2. If you intend to use react-js
-
-```bash
-sudo apt install nodejs
-npm install create-react-app
-npx create-react-app app
-```
-To start the server : 
-```bash
-npm start
-```
+If there are issues or enhancements, feel free to raise an issue
